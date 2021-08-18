@@ -46,3 +46,30 @@ Microservices
 
 ## Remark for Reader
 > On bash, type: `alias docker="winpty docker"` if need be.
+
+---
+## Commands
+
+- `docker --version` to check version.
+- `docker run -d -p 4000:4000 docs/docker.github.io` to get localhost:4000 up and going.
+- `docker ps` to check running containers.
+- `docker exec -it <container-id> sh` to "ssh" into container. 
+- in the shell `vi index.html` to modify localhost:4000
+- `docker stop <container-id>` to stop container. 
+- `docker info` for info about docker install.
+- `docker logs <container-id>` to check logs of container; click [here](https://docs.docker.com/engine/reference/commandline/logs/) for more info. You can save it by `docker logs <container-id> >& file.log`.
+- `docker rm <container-id>` to remove a container.
+- `docker images` to show images.
+- `docker rmi <image-id>` to remove image.
+- `docker run -d -p 80:80 nginx`
+- `cd usr/share/nginx/html`
+-`apt update -y`
+-`apt-get install vim` or `apt-get install nano`
+
+---
+## Setup own nginx
+- `docker run -d -p 80:80 nginx`
+- Create your `index.html` on host
+- cd to the file
+- `docker cp index.html <container-id>:/usr/share/nginx/html/index.html`.
+- finished.
