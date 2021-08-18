@@ -73,3 +73,9 @@ Microservices
 - cd to the file
 - `docker cp index.html <container-id>:/usr/share/nginx/html/index.html`.
 - finished.
+
+## push to docker
+- `docker build -t ahhhman/my-page:aman`
+- `docker tag nginx ahhhman/my-page:aman`
+- `docker commit be7942a6cf40 ahhhman/my-page:aman`
+- `docker push ahhhman/my-page:aman`
